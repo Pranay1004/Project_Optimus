@@ -65,25 +65,28 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 mb-8 shadow-glass">
-            <HardHat className="h-5 w-5 text-saffron animate-pulse" />
-            <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Our Services</span>
-          </div>
+          <button
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+            style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+          >
+            <span className="text-2xl">🏗️</span>
+            <span>Service Area</span>
+          </button>
           
           <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-6 tracking-tight">
-            Professional
+            Our Service
             <span className="block bg-premium-gradient bg-clip-text text-transparent">
-              Construction Solutions
+              Coverage Area
             </span>
           </h2>
           <div className="w-32 h-1 bg-premium-gradient mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-charcoal-noir max-w-4xl mx-auto font-body leading-relaxed">
-            From waterproofing to complete renovations, we deliver professional construction 
-            and repair solutions for all your building needs.
+            OPTIMUS PROJECTS provides comprehensive construction and renovation services 
+            across multiple specializations to meet all your building needs.
           </p>
         </div>
 
-        {/* Services Grid - 5 columns on large screens, responsive */}
+        {/* Service Area Grid - 5 columns on large screens, responsive */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
           {services.map((service, index) => {
             return (
@@ -132,10 +135,10 @@ const Services = () => {
               <HardHat className="h-8 w-8 text-silk-white" />
             </div>
             <h3 className="text-3xl font-display font-bold mb-4">
-              Ready to Start Your Project?
+              Looking for Services in Your Area?
             </h3>
             <p className="text-lg mb-6 opacity-90 font-body max-w-2xl mx-auto">
-              Get professional construction solutions from OPTIMUS PROJECTS. Quality work, transparent pricing, guaranteed results.
+              OPTIMUS PROJECTS serves across multiple locations with expert construction and renovation services. Contact us to check service availability in your area.
             </p>
             <a
               href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20want%20to%20discuss%20a%20construction%20project..."

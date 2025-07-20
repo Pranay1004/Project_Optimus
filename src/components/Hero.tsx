@@ -23,10 +23,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-10">
             {/* Premium Badge */}
-            <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 shadow-glass">
-              <Crown className="h-5 w-5 text-saffron animate-pulse" />
-              <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Premium Construction</span>
-            </div>
+            <button
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+              style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+            >
+              <span className="text-2xl">🏗️</span>
+              <span>Premium Construction</span>
+            </button>
 
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-display font-bold text-onyx leading-tight tracking-tight">
