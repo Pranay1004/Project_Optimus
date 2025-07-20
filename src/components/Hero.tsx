@@ -1,7 +1,14 @@
 import React from 'react';
-import { ArrowRight, MessageCircle, CheckCircle, Crown, Gem, Sparkles } from 'lucide-react';
+import { ArrowRight, MessageCircle, CheckCircle, Crown, Gem, Sparkles, Target, Building, Calendar, Users, Trophy, Shield } from 'lucide-react';
 
 const Hero = () => {
+  const achievements = [
+    { icon: Building, number: '500+', label: 'Projects Completed' },
+    { icon: Calendar, number: '10+', label: 'Years Experience' },
+    { icon: Users, number: '50+', label: 'Skilled Workers' },
+    { icon: Trophy, number: '100%', label: 'Client Satisfaction' }
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-hero-gradient">
       {/* Animated Background Elements */}
@@ -24,15 +31,15 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-display font-bold text-onyx leading-tight tracking-tight">
                 We Build, We Transform,
-                <span className="block bg-premium-gradient bg-clip-text text-transparent">
+                <span className="block text-saffron">
                   We Deliver
                 </span>
               </h1>
-              <div className="text-2xl md:text-3xl font-accent font-semibold text-saffron">
+              <div className="text-2xl md:text-3xl font-accent font-semibold text-saffron mb-6">
                 From Foundations to Finishes
               </div>
               <p className="text-xl text-charcoal-noir leading-relaxed font-body max-w-2xl">
-                OPTIMUS PROJECTS delivers luxury construction and premium renovation solutions. 
+                OPTIMUS PROJECTS delivers construction and renovation solutions. 
                 You bring the vision, we bring the excellence.
               </p>
             </div>
@@ -41,8 +48,8 @@ const Hero = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 'End-to-end solutions',
-                'Premium craftsmanship',
-                'Luxury finishes',
+                'Quality craftsmanship',
+                'Professional finishes',
                 'Transparent process'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -76,44 +83,39 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Premium Achievement Stats */}
-          <div className="relative space-y-8">
+          <div className="relative">
             {/* Achievement Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { icon: CheckCircle, number: '500+', label: 'Projects Completed', color: 'saffron' },
-                { icon: Crown, number: '10+', label: 'Years Experience', color: 'gold' },
-                { icon: Gem, number: '50+', label: 'Skilled Workers', color: 'rose-gold' },
-                { icon: Sparkles, number: '100%', label: 'Client Satisfaction', color: 'moonstone' }
-              ].map((achievement, index) => {
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              {achievements.map((achievement, index) => {
                 const IconComponent = achievement.icon;
                 return (
                   <div
                     key={index}
-                    className="group relative bg-glass-white backdrop-blur-glass p-6 rounded-3xl shadow-floating text-center hover:shadow-gold-glow transition-all duration-500 hover:scale-105 border border-gold border-opacity-30"
+                    className="bg-glass-white backdrop-blur-glass p-6 rounded-2xl shadow-floating text-center border border-gold border-opacity-30"
                   >
-                    <div className="relative">
-                      <div className={`bg-premium-gradient p-3 rounded-2xl w-14 h-14 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-glow`}>
-                        <IconComponent className="h-7 w-7 text-silk-white" />
-                      </div>
-                      <div className="text-3xl font-display font-bold text-onyx mb-2 group-hover:bg-premium-gradient group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {achievement.number}
-                      </div>
-                      <div className="text-charcoal-noir font-accent font-medium text-sm">
-                        {achievement.label}
-                      </div>
+                    <div className="bg-premium-gradient p-3 rounded-xl w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-glow">
+                      <IconComponent className="h-6 w-6 text-silk-white" />
+                    </div>
+                    <div className="text-3xl font-display font-bold text-onyx mb-2">
+                      {achievement.number}
+                    </div>
+                    <div className="text-charcoal-noir font-accent font-medium text-sm">
+                      {achievement.label}
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            {/* Premium Badge */}
-            <div className="bg-premium-gradient p-8 rounded-3xl text-silk-white text-center shadow-gold-glow">
-              <div className="bg-silk-white bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <Crown className="h-8 w-8 text-silk-white fill-current" />
+            {/* Our Philosophy Card */}
+            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30 text-center">
+              <div className="bg-premium-gradient p-4 rounded-xl w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-glow">
+                <Target className="h-8 w-8 text-silk-white" />
               </div>
-              <h4 className="text-xl font-display font-bold mb-2">Premium Excellence</h4>
-              <p className="text-sm font-body opacity-90">Luxury Results Guaranteed</p>
+              <h4 className="text-xl font-display font-bold text-onyx mb-3">Our Philosophy</h4>
+              <p className="text-charcoal-noir font-body text-sm">
+                We believe in doing things right the first time — not patching or fixing what's broken later. That's why we focus on robust projects, long-term solutions, and quality that holds up for years. From bare concrete to polished finishes — we build it all.
+              </p>
             </div>
           </div>
         </div>

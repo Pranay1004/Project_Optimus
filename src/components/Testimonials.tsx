@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote, Building, Home, MessageCircle } from 'lucide-react';
+import { Quote, Building, Home, MessageCircle, CheckCircle, ThumbsUp } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
@@ -8,7 +8,7 @@ const Testimonials = () => {
       author: "Rajesh Kumar",
       role: "Commercial Property Owner",
       location: "Mumbai",
-      rating: 5,
+      verified: true,
       type: "commercial"
     },
     {
@@ -16,7 +16,7 @@ const Testimonials = () => {
       author: "Priya Sharma",
       role: "Residential Client",
       location: "Delhi",
-      rating: 5,
+      verified: true,
       type: "residential"
     },
     {
@@ -24,7 +24,7 @@ const Testimonials = () => {
       author: "Amit Patel",
       role: "Building Manager",
       location: "Bangalore",
-      rating: 5,
+      verified: true,
       type: "commercial"
     },
     {
@@ -32,7 +32,7 @@ const Testimonials = () => {
       author: "Sunita Reddy",
       role: "Homeowner",
       location: "Hyderabad",
-      rating: 5,
+      verified: true,
       type: "residential"
     }
   ];
@@ -49,7 +49,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 mb-8 shadow-glass">
-            <Star className="h-5 w-5 text-saffron fill-current" />
+            <ThumbsUp className="h-5 w-5 text-saffron" />
             <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Client Trust</span>
           </div>
           
@@ -77,11 +77,12 @@ const Testimonials = () => {
                 <Quote className="h-16 w-16 text-saffron" />
               </div>
 
-              {/* Rating */}
+              {/* Verified Badge */}
               <div className="flex items-center mb-6">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-current mr-1" />
-                ))}
+                <div className="flex items-center space-x-2 bg-green-100 px-3 py-1 rounded-full">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span className="text-green-700 font-accent font-semibold text-xs">Verified Client</span>
+                </div>
               </div>
 
               {/* Testimonial Text */}
@@ -124,7 +125,7 @@ const Testimonials = () => {
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {[
-            { number: '4.9/5', label: 'Average Rating', icon: Star },
+            { number: '98%', label: 'Client Satisfaction', icon: ThumbsUp },
             { number: '500+', label: 'Happy Clients', icon: Building },
             { number: '100%', label: 'Projects Completed', icon: Home },
             { number: '24/7', label: 'Support Available', icon: MessageCircle }

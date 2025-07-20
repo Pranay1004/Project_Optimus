@@ -44,10 +44,11 @@ const About = () => {
               </h2>
               <div className="w-32 h-1 bg-premium-gradient mb-8 rounded-full"></div>
               
+              <div className="text-saffron font-accent font-bold text-lg mb-6">
+                From Foundations to Finishes.
+              </div>
+              
               <div className="space-y-6 text-lg text-charcoal-noir leading-relaxed font-body">
-                <p className="text-xl font-semibold text-saffron">
-                  From Foundations to Finishes.
-                </p>
                 <p>
                   We are a full-scope contracting company specializing in the end-to-end execution 
                   of new construction and finishing projects. From the earliest structural work to 
@@ -61,83 +62,53 @@ const About = () => {
                 </p>
               </div>
             </div>
+          </div>
 
-            {/* Key Differentiators */}
-            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-3xl shadow-floating border border-gold border-opacity-30">
-              <h3 className="text-2xl font-display font-bold text-onyx mb-6">
+          {/* Right Content - Achievement Cards */}
+          <div className="space-y-8">
+            {/* Why Choose Us - Innovative Design */}
+            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30">
+              <h3 className="text-xl font-display font-bold text-onyx mb-6">
                 Unlike fragmented setups, our integrated model gives clients:
               </h3>
-              <div className="grid grid-cols-1 gap-4">
+              
+              <div className="space-y-3">
                 {capabilities.map((capability, index) => (
-                  <div key={index} className="flex items-center space-x-3 group">
-                    <div className="bg-premium-gradient p-1.5 rounded-full group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="bg-premium-gradient p-1.5 rounded-full shadow-glow">
                       <CheckCircle className="h-4 w-4 text-silk-white" />
                     </div>
-                    <span className="text-onyx font-body font-medium group-hover:text-saffron transition-colors duration-300">{capability}</span>
+                    <span className="text-charcoal-noir font-body">{capability}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Philosophy */}
-            <div className="bg-premium-gradient p-8 rounded-3xl text-silk-white shadow-gold-glow">
-              <div className="flex items-center space-x-3 mb-4">
-                <Target className="h-8 w-8" />
-                <h3 className="text-2xl font-display font-bold">Our Philosophy</h3>
+            {/* Why OPTIMUS Card */}
+            <div className="bg-premium-gradient p-8 rounded-2xl text-silk-white shadow-gold-glow">
+              <div className="flex items-center space-x-3 mb-6">
+                <Target className="h-6 w-6" />
+                <h3 className="text-xl font-display font-bold">Why OPTIMUS?</h3>
               </div>
-              <p className="text-lg font-body leading-relaxed opacity-95">
-                We believe in doing things right the first time — not patching or fixing what's 
-                broken later. That's why we focus on new projects, long-term solutions, and 
-                quality that holds up for years. <strong>From bare concrete to polished finishes — we build it all.</strong>
-              </p>
-            </div>
-          </div>
-
-          {/* Right Content - Achievement Cards */}
-          <div className="space-y-8">
-            {/* Achievement Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => {
-                const IconComponent = achievement.icon;
-                return (
-                  <div
-                    key={index}
-                    className="group relative bg-glass-white backdrop-blur-glass p-8 rounded-3xl shadow-floating text-center hover:shadow-gold-glow transition-all duration-500 hover:scale-105 border border-gold border-opacity-30"
-                  >
-                    <div className="relative">
-                      <div className="bg-premium-gradient p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-glow">
-                        <IconComponent className="h-8 w-8 text-silk-white" />
-                      </div>
-                      <div className="text-4xl font-display font-bold text-onyx mb-3 group-hover:bg-premium-gradient group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {achievement.number}
-                      </div>
-                      <div className="text-charcoal-noir font-accent font-medium">
-                        {achievement.label}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Professional Badge */}
-            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-3xl shadow-floating border border-gold border-opacity-30 text-center">
-              <div className="bg-premium-gradient p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-glow">
-                <Shield className="h-10 w-10 text-silk-white" />
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
+                  <div className="text-xl font-display font-bold mb-1">ONE</div>
+                  <div className="text-xs font-body">Contract for Everything</div>
+                </div>
+                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
+                  <div className="text-xl font-display font-bold mb-1">ZERO</div>
+                  <div className="text-xs font-body">Coordination Hassles</div>
+                </div>
+                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
+                  <div className="text-xl font-display font-bold mb-1">100%</div>
+                  <div className="text-xs font-body">Quality Guarantee</div>
+                </div>
+                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
+                  <div className="text-xl font-display font-bold mb-1">24/7</div>
+                  <div className="text-xs font-body">Project Support</div>
+                </div>
               </div>
-              <h4 className="text-2xl font-display font-bold text-onyx mb-3">Licensed & Insured</h4>
-              <p className="text-charcoal-noir font-body">
-                Professional documentation, licenses, and insurance ensuring compliance and peace of mind
-              </p>
-            </div>
-
-            {/* Process Badge */}
-            <div className="bg-premium-gradient p-8 rounded-3xl text-silk-white text-center shadow-gold-glow">
-              <div className="bg-silk-white bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <Building className="h-8 w-8 text-silk-white" />
-              </div>
-              <h4 className="text-xl font-display font-bold mb-2">We are not just executors</h4>
-              <p className="text-sm font-body opacity-90">We're delivery partners with methodical planning and skilled execution</p>
             </div>
           </div>
         </div>
