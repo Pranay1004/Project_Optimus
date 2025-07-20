@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide "Powered by Uploadcare" */
+.uploadcare-powered-by {
+  display: none !important;
+}
+
+/* Progress bar styling */
+.uploadcare-widget-progress {
+  background: linear-gradient(to right, var(--saffron), var(--gold)) !important;
+}
+
+.uploadcare-container .uc-custom:after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.1)) !important;
+  animation: shimmer 2s ease-in-out infinite !important;
+  z-index: 1 !important;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Hide default uploadcare text and styling */
+.uploadcare-container .uc-custom .uc-widget-button-text,
+.uploadcare-container .uc-custom .uc-widget-button,
+.uploadcare-container .uc-custom button {
+  display: none !important;
+}
+
+/* File upload progress styling */
+.uc-progress {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb) !important;
+}
+
+.uc-progress-bar {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6) !important;
+  transition: width 0.3s ease !important;
+}

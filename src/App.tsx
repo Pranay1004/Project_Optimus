@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
 function App() {
+
   return (
     <div className="min-h-screen bg-silk-white">
       <Navigation />

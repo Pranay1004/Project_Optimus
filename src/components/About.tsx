@@ -27,14 +27,17 @@ const About = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
           {/* Left Content */}
           <div className="space-y-10">
             <div>
-              <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 mb-8 shadow-glass">
-                <Wrench className="h-5 w-5 text-saffron animate-pulse" />
-                <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Who We Are</span>
-              </div>
+              <button
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-6 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+                style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+              >
+                <span className="text-2xl">✨</span>
+                <span className="">Who We Are</span>
+              </button>
               
               <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-8 tracking-tight leading-tight">
                 We Build, We Transform,

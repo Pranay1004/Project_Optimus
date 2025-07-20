@@ -13,11 +13,14 @@ const Footer = () => {
 
   const serviceAreas = [
     'Mumbai, Maharashtra',
-    'Delhi NCR',
-    'Bangalore, Karnataka',
-    'Hyderabad, Telangana',
-    'Pune, Maharashtra',
-    'Chennai, Tamil Nadu'
+    'Navi Mumbai, Maharashtra',
+    'Panvel, Maharashtra',
+    'Thane, Maharashtra',
+    'Kalyan, Maharashtra',
+    'Mira Bhayandar, Maharashtra',
+    'South Mumbai, Maharashtra',
+    'Borivali, Maharashtra',
+    'Alibaug, Maharashtra',
   ];
 
   return (
@@ -42,7 +45,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-3xl font-display font-bold text-silk-white">OPTIMUS</h3>
-                  <p className="text-sm text-silver font-body tracking-wider uppercase">Interior & Exterior Solutions</p>
+                  <p className="text-sm text-silver font-body tracking-wider uppercase">PROJECTS</p>
                 </div>
               </div>
               
@@ -71,10 +74,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-gold" />
-              <h4 className="text-xl font-display font-bold text-gold">Our Services</h4>
-            </div>
+            <button
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+              style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+            >
+              <span className="text-2xl">🛠️</span>
+              <span>Our Services</span>
+            </button>
             <div className="w-12 h-0.5 bg-premium-gradient rounded-full"></div>
             <ul className="space-y-3">
               {quickLinks.map((link, linkIndex) => (
@@ -142,7 +148,7 @@ const Footer = () => {
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
                 <Shield className="h-5 w-5 text-gold" />
-                <span className="text-silver font-body text-sm">Licensed & Insured</span>
+                <span className="text-silver font-body text-sm">Licensed</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-gold" />
@@ -150,11 +156,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-5 w-5 text-gold" />
-                <span className="text-silver font-body text-sm">24/7 Support</span>
+                <span className="text-silver font-body text-sm"> Support with 24 hours</span>
               </div>
             </div>
             <div className="text-silver font-body text-sm">
-              Professional Construction Solutions Since 2014
+              Professional Construction Solutions Since 2020
             </div>
           </div>
         </div>
@@ -162,7 +168,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-8 border-t border-silver border-opacity-20 flex flex-col md:flex-row justify-between items-center">
           <p className="text-silver font-body text-sm">
-            © 2024 OPTIMUS Interior & Exterior Solutions. All rights reserved.
+            © 2025 OPTIMUS Projects. All rights reserved.
           </p>
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#" className="text-silver hover:text-gold text-sm font-body transition-colors duration-300">

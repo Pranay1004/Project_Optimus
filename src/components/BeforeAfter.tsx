@@ -55,10 +55,13 @@ const BeforeAfter = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 mb-8 shadow-glass">
-            <CheckCircle className="h-5 w-5 text-saffron" />
-            <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Our Work</span>
-          </div>
+          <button
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+            style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+          >
+            <span className="text-2xl">🖼️</span>
+            <span>Our Work</span>
+          </button>
           
           <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-6 tracking-tight">
             Before & After
