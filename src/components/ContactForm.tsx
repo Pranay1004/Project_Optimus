@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FileUploaderMinimal } from '@uploadcare/react-uploader';
 import '@uploadcare/react-uploader/core.css';
-import { MessageSquare, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { MessageSquare, Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -117,7 +117,6 @@ const ContactForm = () => {
           <h2 className="text-5xl md:text-6xl font-display font-bold text-silk-white mb-2 tracking-tight">
             Ready to Start <span className="block text-saffron">Your Project?</span>
           </h2>
-          <div className="w-24 h-1 bg-saffron mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-silver max-w-3xl mx-auto font-body leading-relaxed">
             Begin your construction project with a complimentary consultation. Our expert team will bring your vision to life with professional execution.
           </p>
@@ -301,8 +300,8 @@ const ContactForm = () => {
             </div>
             
             <div className="bg-glass-white bg-opacity-40 p-2 rounded-lg mt-2 flex items-center gap-2 w-fit mx-auto">
-              <Clock className="h-4 w-4 text-saffron" />
-              <span className="font-accent font-medium text-saffron text-xs">24-Hour Response Guarantee</span>
+              <Clock className="h-4 w-4 text-gold" />
+              <span className="font-accent font-semibold text-gold text-xs drop-shadow-sm">24-Hour Response Guarantee</span>
             </div>
           </div>
 
@@ -377,17 +376,19 @@ const ContactForm = () => {
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl animate-pulse"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-400/20 to-transparent rounded-full blur-xl"></div>
               
-              <div className="relative z-10 text-center text-white">
-                <div className="bg-white/15 backdrop-blur-sm p-6 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 border border-white/20">
-                  <MessageCircle className="h-12 w-12 text-white drop-shadow-lg" />
+              <div className="relative z-10 flex flex-col h-full justify-between text-center text-white">
+                <div>
+                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 border border-white/20">
+                    <MessageCircle className="h-12 w-12 text-white drop-shadow-lg" />
+                  </div>
+                  <h4 className="text-3xl font-display font-bold mb-3 drop-shadow-lg">Priority Support</h4>
+                  <p className="mb-8 font-body text-lg opacity-90 leading-relaxed">24/7 project support for our valued clients with instant response guarantee</p>
                 </div>
-                <h4 className="text-3xl font-display font-bold mb-3 drop-shadow-lg">Priority Support</h4>
-                <p className="mb-8 font-body text-lg opacity-90 leading-relaxed">24/7 project support for our valued clients with instant response guarantee</p>
                 <a
                   href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20need%20priority%20construction%20services..."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 text-purple-700 px-8 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
+                  className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 text-purple-700 px-8 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg mt-4"
                 >
                   <MessageCircle className="h-5 w-5" />
                   <span>WhatsApp Now</span>

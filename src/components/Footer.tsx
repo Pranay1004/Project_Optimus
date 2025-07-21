@@ -75,11 +75,10 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-6">
             <button
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
-              style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+              className="flex items-center space-x-2"
             >
-              <span className="text-2xl">🛠️</span>
-              <span>Our Services</span>
+              <MapPin className="h-5 w-5 text-gold" />
+              <h4 className="text-xl font-display font-bold text-gold">Our Services</h4>
             </button>
             <div className="w-12 h-0.5 bg-premium-gradient rounded-full"></div>
             <ul className="space-y-3">
