@@ -28,7 +28,6 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus({ type: null, message: '' });
 
-    // Create a beautifully formatted email data object
     const emailData = {
       '_subject': '🏗️ New Project Inquiry - Optimus Projects',
       '_template': 'table',
@@ -96,7 +95,6 @@ const ContactForm = () => {
     }
   };
 
-
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-midnight-graphite via-charcoal-noir to-onyx relative overflow-hidden">
       {/* Background Elements */}
@@ -122,9 +120,90 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Contact Form */}
-          <div className="bg-glass-white bg-opacity-70 backdrop-blur-lg p-10 rounded-3xl shadow-xl border border-gold border-opacity-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+          {/* Contact Info - Now First */}
+          <div className="h-full flex flex-col space-y-8">
+            {/* Contact Information Section */}
+            <div className="flex-1 bg-glass-white bg-opacity-70 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-gold border-opacity-20">
+              {/* Contact Information Header */}
+              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-3 mb-8 shadow-md text-silk-white">
+                <span className="text-2xl">📞</span>
+                <span className="font-display font-bold text-xl">Contact Information</span>
+              </div>
+              
+              <div className="space-y-4">
+                {/* Project Hotline Card */}
+                <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-saffron to-gold p-3 rounded-xl">
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-gray-800 text-xl">Project Hotline</h3>
+                      <p className="text-gray-700 text-lg">+91 73030 15133</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email Card */}
+                <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-saffron to-gold p-3 rounded-xl">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-gray-800 text-xl">Email</h3>
+                      <p className="text-gray-700 text-lg">mukesh244@pm.me</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Office Location Card */}
+                <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-saffron to-gold p-3 rounded-xl">
+                      <MapPin className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-gray-800 text-xl">Office Location</h3>
+                      <p className="text-gray-700 text-lg">123 Prestige Boulevard<br />Elite District, ED 12345</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Consultation Hours Card */}
+                <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-gradient-to-r from-saffron to-gold p-3 rounded-xl">
+                      <Clock className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-gray-800 text-xl">Consultation Hours</h3>
+                      <p className="text-gray-700 text-lg">Mon-Fri: 9AM-7PM<br />Sat: 10AM-5PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Golden Gradient CTA Box */}
+            <div className="bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-3xl p-8 text-center shadow-2xl">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">Ready to Join Our Satisfied Clients?</h3>
+              <p className="text-base md:text-lg text-white/90 mb-6">Experience the OPTIMUS difference. Professional construction solutions with guaranteed results.</p>
+              <a
+                href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20want%20to%20discuss%20a%20construction%20project..."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-3 bg-white hover:bg-yellow-50 text-orange-500 px-6 py-3 rounded-full font-accent font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="h-5 w-5" />
+                <span>Start Your Project Today</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Form - Now Second */}
+          <div className="h-full flex flex-col bg-glass-white bg-opacity-70 backdrop-blur-lg p-10 rounded-3xl shadow-xl border border-gold border-opacity-20">
             <button
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
               style={{ fontSize: '2rem', padding: '1rem 2rem' }}
@@ -302,98 +381,6 @@ const ContactForm = () => {
             <div className="bg-glass-white bg-opacity-40 p-2 rounded-lg mt-2 flex items-center gap-2 w-fit mx-auto">
               <Clock className="h-4 w-4 text-gold" />
               <span className="font-accent font-semibold text-gold text-xs drop-shadow-sm">24-Hour Response Guarantee</span>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            {/* Contact Information Section */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/30 backdrop-blur-xl p-8 rounded-3xl border border-white/40 shadow-2xl shadow-blue-500/10">
-              {/* Contact Information Header */}
-              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-3 mb-8 shadow-md text-silk-white">
-                <span className="text-2xl">📞</span>
-                <span className="font-display font-bold text-xl">Contact Information</span>
-              </div>
-              
-              <div className="space-y-4">
-                {/* Project Hotline Card */}
-                <div className="bg-gradient-to-r from-orange-400 to-yellow-400 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-white p-3 rounded-xl">
-                      <Phone className="h-6 w-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-white text-xl">Project Hotline</h3>
-                      <p className="text-white opacity-90 text-lg">+91 73030 15133</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Email Card */}
-                <div className="bg-gradient-to-r from-emerald-400 to-teal-400 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-white p-3 rounded-xl">
-                      <Mail className="h-6 w-6 text-emerald-500" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-white text-xl">Email</h3>
-                      <p className="text-white opacity-90 text-lg">mukesh244@pm.me</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Office Location Card */}
-                <div className="bg-gradient-to-r from-pink-400 to-rose-400 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-white p-3 rounded-xl">
-                      <MapPin className="h-6 w-6 text-pink-500" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-white text-xl">Office Location</h3>
-                      <p className="text-white opacity-90 text-lg">123 Prestige Boulevard<br />Elite District, ED 12345</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Consultation Hours Card */}
-                <div className="bg-gradient-to-r from-violet-400 to-purple-400 p-6 rounded-2xl shadow-lg transform transition-transform hover:scale-105">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-white p-3 rounded-xl">
-                      <Clock className="h-6 w-6 text-violet-500" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-white text-xl">Consultation Hours</h3>
-                      <p className="text-white opacity-90 text-lg">Mon-Fri: 9AM-7PM<br />Sat: 10AM-5PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Priority Service Card */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-violet-600 via-purple-600 to-blue-700 p-8 rounded-3xl shadow-2xl shadow-purple-500/25">
-              {/* Animated background elements */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-400/20 to-transparent rounded-full blur-xl"></div>
-              
-              <div className="relative z-10 flex flex-col h-full justify-between text-center text-white">
-                <div>
-                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-2xl w-24 h-24 flex items-center justify-center mx-auto mb-6 border border-white/20">
-                    <MessageCircle className="h-12 w-12 text-white drop-shadow-lg" />
-                  </div>
-                  <h4 className="text-3xl font-display font-bold mb-3 drop-shadow-lg">Priority Support</h4>
-                  <p className="mb-8 font-body text-lg opacity-90 leading-relaxed">24/7 project support for our valued clients with instant response guarantee</p>
-                </div>
-                <a
-                  href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20need%20priority%20construction%20services..."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-white hover:bg-gray-50 text-purple-700 px-8 py-4 rounded-2xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg mt-4"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                  <span>WhatsApp Now</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
