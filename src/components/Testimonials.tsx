@@ -15,7 +15,7 @@ const Testimonials = () => {
       text: "OPTIMUS solved a problem three other contractors couldn't figure out. Their waterproofing work has been perfect for 2 years now.",
       author: "Priya Sharma",
       role: "Residential Client",
-      location: "Delhi",
+      location: "Kharghar",
       verified: true,
       type: "residential"
     },
@@ -23,7 +23,7 @@ const Testimonials = () => {
       text: "Fast, reliable, and they actually showed up when they said they would. The complete renovation was finished on time and within budget.",
       author: "Amit Patel",
       role: "Building Manager",
-      location: "Bangalore",
+      location: "Panvel",
       verified: true,
       type: "commercial"
     },
@@ -31,14 +31,14 @@ const Testimonials = () => {
       text: "From RCC work to final painting, everything was handled professionally. No mess, no confusion, just excellent results.",
       author: "Sunita Reddy",
       role: "Homeowner",
-      location: "Hyderabad",
+      location: "Alibagh",
       verified: true,
       type: "residential"
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-pearl-white via-glass-white to-silk-white relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-br from-pearl-white via-glass-white to-silk-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-r from-gold to-rose-gold rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float"></div>
@@ -47,7 +47,8 @@ const Testimonials = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
+          {/* Client Trust button commented out
           <button
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
             style={{ fontSize: '2rem', padding: '1rem 2rem' }}
@@ -55,11 +56,10 @@ const Testimonials = () => {
             <span className="text-2xl">🤝</span>
             <span>Client Trust</span>
           </button>
-          
+          */}
           <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-6 tracking-tight">
-            What Our
             <span className="block bg-premium-gradient bg-clip-text text-transparent">
-              Clients Say
+              What Our Clients Say
             </span>
           </h2>
           <div className="w-32 h-1 bg-premium-gradient mx-auto mb-8 rounded-full"></div>
@@ -69,7 +69,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -126,7 +126,7 @@ const Testimonials = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           {[
             { number: '98%', label: 'Client Satisfaction', icon: ThumbsUp },
             { number: '500+', label: 'Happy Clients', icon: Building },
@@ -146,7 +146,7 @@ const Testimonials = () => {
           })}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section - Commented Out 
         <div className="bg-premium-gradient rounded-3xl p-12 text-center text-silk-white shadow-gold-glow">
           <h3 className="text-4xl font-display font-bold mb-4">
             Ready to Join Our Satisfied Clients?
@@ -164,6 +164,7 @@ const Testimonials = () => {
             <span>Start Your Project Today</span>
           </a>
         </div>
+        */}
       </div>
     </section>
   );

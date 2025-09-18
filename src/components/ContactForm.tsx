@@ -96,15 +96,16 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-midnight-graphite via-charcoal-noir to-onyx relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-pearl-white via-glass-white to-silk-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-saffron to-gold rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-gold to-saffron rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-saffron to-gold rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-gold to-saffron rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
+          {/* Post a Query button commented out
           <button
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-3 mb-6 shadow-md font-display font-bold text-xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
             style={{ fontSize: '1.25rem', padding: '0.75rem 2rem' }}
@@ -112,11 +113,12 @@ const ContactForm = () => {
             <span className="text-xl">💬</span>
             <span>Post a Query</span>
           </button>
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-silk-white mb-2 tracking-tight">
-            Ready to Start <span className="block text-saffron">Your Project?</span>
+          */}
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-2 tracking-tight">
+            Ready to Start <span className="block bg-premium-gradient bg-clip-text text-transparent">Your Project?</span>
           </h2>
-          <p className="text-lg text-silver max-w-3xl mx-auto font-body leading-relaxed">
-            Begin your construction project with a complimentary consultation. Our expert team will bring your vision to life with professional execution.
+          <p className="text-lg text-charcoal-noir max-w-3xl mx-auto font-body leading-relaxed">
+            Begin your construction project with an expert consultation. Our expert team will bring your vision to life with professional execution.
           </p>
         </div>
 
@@ -126,9 +128,11 @@ const ContactForm = () => {
             {/* Contact Information Section */}
             <div className="flex-1 bg-glass-white bg-opacity-70 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-gold border-opacity-20">
               {/* Contact Information Header */}
-              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-3 mb-8 shadow-md text-silk-white">
-                <span className="text-2xl">📞</span>
-                <span className="font-display font-bold text-xl">Contact Information</span>
+              <div className="flex justify-center w-full mb-8">
+                <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 shadow-glass font-display font-bold text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none">
+                  <span className="text-2xl">📞</span>
+                  <span className="font-display font-bold text-2xl">Contact Information</span>
+                </div>
               </div>
               
               <div className="space-y-4">
@@ -166,7 +170,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <h3 className="font-display font-bold text-gray-800 text-xl">Office Location</h3>
-                      <p className="text-gray-700 text-lg">123 Prestige Boulevard<br />Elite District, ED 12345</p>
+                      <p className="text-gray-700 text-lg">Optimus Projects<br />Dhanashree Chs, Sector-13, Kharghar</p>
                     </div>
                   </div>
                 </div>
@@ -186,15 +190,15 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Golden Gradient CTA Box */}
-            <div className="bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-3xl p-8 text-center shadow-2xl">
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">Ready to Join Our Satisfied Clients?</h3>
-              <p className="text-base md:text-lg text-white/90 mb-6">Experience the OPTIMUS difference. Professional construction solutions with guaranteed results.</p>
+            {/* Glassy CTA Box */}
+            <div className="bg-glass-white bg-opacity-70 backdrop-blur-lg rounded-3xl p-8 text-center shadow-floating border border-gold border-opacity-30">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-onyx mb-2">Ready to Join Our Satisfied Clients?</h3>
+              <p className="text-base md:text-lg text-charcoal-noir mb-6">Experience the OPTIMUS difference. Professional construction solutions with guaranteed results.</p>
               <a
                 href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20want%20to%20discuss%20a%20construction%20project..."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 bg-white hover:bg-yellow-50 text-orange-500 px-6 py-3 rounded-full font-accent font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold text-silk-white px-6 py-3 rounded-full font-accent font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-glass hover:shadow-gold-glow"
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>Start Your Project Today</span>
@@ -204,26 +208,19 @@ const ContactForm = () => {
 
           {/* Contact Form - Now Second */}
           <div className="h-full flex flex-col bg-glass-white bg-opacity-70 backdrop-blur-lg p-10 rounded-3xl shadow-xl border border-gold border-opacity-20">
-            <button
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
-              style={{ fontSize: '2rem', padding: '1rem 2rem' }}
-            >
-              <span className="text-2xl">💬</span>
-              <span>Post a Query</span>
-            </button>
+            <div className="flex justify-center w-full mb-8">
+              <button
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
+              >
+                <span className="text-2xl">💬</span>
+                <span>Post a Query</span>
+              </button>
+            </div>
             
             {/* Typeform Embed */}
             <div className="mb-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {status && (
-                  <div className={`p-4 rounded-xl ${
-                    status.type === 'success' 
-                      ? 'bg-green-50 text-green-800 border border-green-200' 
-                      : 'bg-red-50 text-red-800 border border-red-200'
-                  }`}>
-                    {status.message}
-                  </div>
-                )}
+                {/* Status message removed as requested */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <input
                     type="text"
@@ -273,10 +270,10 @@ const ContactForm = () => {
                   <option value="Waterproofing">Waterproofing</option>
                   <option value="Painting">Painting</option>
                   <option value="Tiling & Flooring">Tiling & Flooring</option>
-                  <option value="Electrical Work">Electrical Work</option>
+                  <option value="Consultancy">Consultancy</option>
                   <option value="Plumbing Work">Plumbing Work</option>
                   <option value="Renovation">Renovation</option>
-                  <option value="Consultancy">Consultancy</option>
+                  <option value="Electrical Work">Electrical Work</option>
                   <option value="Others">Others</option>
                 </select>
                 

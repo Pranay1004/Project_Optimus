@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/*
+(import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, MapPin, Wrench, CheckCircle } from 'lucide-react';
 
 const BeforeAfter = () => {
@@ -58,6 +59,7 @@ const BeforeAfter = () => {
           <button
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
             style={{ fontSize: '2rem', padding: '1rem 2rem' }}
+*/
           >
             <span className="text-2xl">🖼️</span>
             <span>Our Work</span>
@@ -182,7 +184,7 @@ const BeforeAfter = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        {/*<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
             { number: '500+', label: 'Projects Completed' },
             { number: '100%', label: 'Client Satisfaction' },
@@ -196,8 +198,9 @@ const BeforeAfter = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section>*/}
   );
 };
 
-export default BeforeAfter;
+export default BeforeAfter;) 
+*/
