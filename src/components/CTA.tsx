@@ -12,11 +12,6 @@ const CTA = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-glass-white backdrop-blur-glass border border-gold border-opacity-30 rounded-full px-6 py-3 mb-8 shadow-glass">
-            <Crown className="h-5 w-5 text-gold animate-pulse" />
-            <span className="text-onyx font-accent font-semibold text-sm tracking-wide">Luxury Consultation</span>
-          </div>
-          
           <h2 className="text-5xl md:text-6xl font-display font-bold text-silk-white mb-6 tracking-tight">
             Ready to Create
             <span className="block bg-premium-gradient bg-clip-text text-transparent">
@@ -25,8 +20,7 @@ const CTA = () => {
           </h2>
           <div className="w-32 h-1 bg-premium-gradient mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-silver max-w-4xl mx-auto font-body leading-relaxed">
-            Begin your luxury transformation journey with a complimentary consultation. 
-            Our master designers will bring your vision to extraordinary life.
+            Begin your transformation journey with a consultation. 
           </p>
         </div>
 
@@ -37,7 +31,7 @@ const CTA = () => {
               <div className="bg-premium-gradient p-3 rounded-full shadow-glow">
                 <Gem className="h-6 w-6 text-silk-white" />
               </div>
-              <h3 className="text-3xl font-display font-bold text-onyx">Luxury Consultation</h3>
+              <h3 className="text-3xl font-display font-bold text-onyx">Expert Consultation</h3>
             </div>
             
             <form className="space-y-6">

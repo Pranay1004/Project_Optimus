@@ -65,18 +65,9 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <button
-            className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-8 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
-            style={{ fontSize: '2rem', padding: '1rem 2rem' }}
-          >
-            <span className="text-2xl">🏗️</span>
-            <span>Service Area</span>
-          </button>
-          
           <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-6 tracking-tight">
-            Our Service
             <span className="block bg-premium-gradient bg-clip-text text-transparent">
-              Coverage Area
+              Expertise & Coverage Area
             </span>
           </h2>
           <div className="w-32 h-1 bg-premium-gradient mx-auto mb-8 rounded-full"></div>
@@ -128,29 +119,6 @@ const Services = () => {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="bg-contractor-gradient rounded-3xl p-10 text-silk-white shadow-contractor">
-            <div className="bg-silk-white bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
-              <HardHat className="h-8 w-8 text-silk-white" />
-            </div>
-            <h3 className="text-3xl font-display font-bold mb-4">
-              Looking for Services in Your Area?
-            </h3>
-            <p className="text-lg mb-6 opacity-90 font-body max-w-2xl mx-auto">
-              OPTIMUS PROJECTS serves across multiple locations with expert construction and renovation services. Contact us to check service availability in your area.
-            </p>
-            <a
-              href="https://wa.me/917303015133?text=Hi%20OPTIMUS%20PROJECTS,%20I%20want%20to%20discuss%20a%20construction%20project..."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-silk-white hover:bg-pearl-white text-saffron px-8 py-3 rounded-full font-accent font-bold text-lg transition-all duration-300 hover:scale-105 shadow-floating"
-            >
-              <MessageCircle className="h-5 w-5" />
-              <span>Get Free Quote</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

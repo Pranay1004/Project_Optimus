@@ -1,13 +1,13 @@
 import React from 'react';
-import { CheckCircle, Users, Calendar, Trophy, Building, Shield, Target, Wrench, Crown, Gem, Sparkles } from 'lucide-react';
+import { CheckCircle, Target, Crown } from 'lucide-react';
 
 const About = () => {
-  const achievements = [
+  /*const achievements = [
     { icon: Building, number: '500+', label: 'Projects Completed' },
     { icon: Calendar, number: '10+', label: 'Years Experience' },
     { icon: Users, number: '50+', label: 'Skilled Workers' },
     { icon: Trophy, number: '100%', label: 'Client Satisfaction' }
-  ];
+  ];*/
 
   const capabilities = [
     'Single point of responsibility',
@@ -31,14 +31,6 @@ const About = () => {
           {/* Left Content */}
           <div className="space-y-10">
             <div>
-              <button
-                className="inline-flex items-center space-x-3 bg-gradient-to-r from-saffron to-gold border-2 border-orange-400 rounded-full px-8 py-5 mb-6 shadow-glass font-display font-bold text-2xl text-silk-white transition-all duration-300 hover:scale-105 hover:shadow-gold-glow focus:outline-none"
-                style={{ fontSize: '2rem', padding: '1rem 2rem' }}
-              >
-                <span className="text-2xl">✨</span>
-                <span className="">Who We Are</span>
-              </button>
-              
               <h2 className="text-5xl md:text-6xl font-display font-bold text-onyx mb-8 tracking-tight leading-tight">
                 We Build, We Transform,
                 <span className="block bg-premium-gradient bg-clip-text text-transparent">
@@ -67,9 +59,50 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Content - Achievement Cards */}
+          {/* Right Content - Philosophy, Why OPTIMUS, and Capabilities */}
           <div className="space-y-8">
-            {/* Why Choose Us - Innovative Design */}
+            {/* Our Philosophy Card */}
+            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="bg-premium-gradient p-3 rounded-xl">
+                  <Target className="h-6 w-6 text-silk-white" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-onyx">Our Philosophy</h3>
+              </div>
+              <p className="text-charcoal-noir font-body leading-relaxed">
+                We believe in doing things right the first time — not patching or fixing what's broken later. That's why we focus on robust projects, long-term solutions, and quality that holds up for years. From bare concrete to polished finishes — we build it all.
+              </p>
+            </div>
+
+            {/* Why OPTIMUS Card */}
+            <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-gradient-to-r from-saffron to-gold p-2 rounded-xl">
+                  <Crown className="h-5 w-5 text-silk-white" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-onyx">Why OPTIMUS?</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-saffron/10 to-gold/10 p-4 rounded-xl border border-gold border-opacity-10">
+                  <div className="text-2xl font-display font-bold mb-1 text-saffron">ONE</div>
+                  <div className="font-body text-charcoal-noir">Contract for Everything</div>
+                </div>
+                <div className="bg-gradient-to-br from-saffron/10 to-gold/10 p-4 rounded-xl border border-gold border-opacity-10">
+                  <div className="text-2xl font-display font-bold mb-1 text-saffron">ZERO</div>
+                  <div className="font-body text-charcoal-noir">Coordination Hassles</div>
+                </div>
+                <div className="bg-gradient-to-br from-saffron/10 to-gold/10 p-4 rounded-xl border border-gold border-opacity-10">
+                  <div className="text-2xl font-display font-bold mb-1 text-saffron">100%</div>
+                  <div className="font-body text-charcoal-noir">Quality Guarantee</div>
+                </div>
+                <div className="bg-gradient-to-br from-saffron/10 to-gold/10 p-4 rounded-xl border border-gold border-opacity-10">
+                  <div className="text-2xl font-display font-bold mb-1 text-saffron">24/7</div>
+                  <div className="font-body text-charcoal-noir">Project Support</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Why Choose Us - Capabilities */}
             <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30">
               <h3 className="text-xl font-display font-bold text-onyx mb-6">
                 Unlike fragmented setups, our integrated model gives clients:
@@ -84,33 +117,6 @@ const About = () => {
                     <span className="text-charcoal-noir font-body">{capability}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Why OPTIMUS Card */}
-            <div className="bg-premium-gradient p-8 rounded-2xl text-silk-white shadow-gold-glow">
-              <div className="flex items-center space-x-3 mb-6">
-                <Target className="h-6 w-6" />
-                <h3 className="text-xl font-display font-bold">Why OPTIMUS?</h3>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
-                  <div className="text-xl font-display font-bold mb-1">ONE</div>
-                  <div className="text-xs font-body">Contract for Everything</div>
-                </div>
-                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
-                  <div className="text-xl font-display font-bold mb-1">ZERO</div>
-                  <div className="text-xs font-body">Coordination Hassles</div>
-                </div>
-                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
-                  <div className="text-xl font-display font-bold mb-1">100%</div>
-                  <div className="text-xs font-body">Quality Guarantee</div>
-                </div>
-                <div className="bg-silk-white bg-opacity-20 p-4 rounded-xl backdrop-blur-sm">
-                  <div className="text-xl font-display font-bold mb-1">24/7</div>
-                  <div className="text-xs font-body">Project Support</div>
-                </div>
               </div>
             </div>
           </div>
