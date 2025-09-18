@@ -102,7 +102,8 @@ const About = () => {
               </div>
             </div>
             
-            {/* Why Choose Us - Capabilities */}
+            {/*
+            Why Choose Us - Capabilities
             <div className="bg-glass-white backdrop-blur-glass p-8 rounded-2xl shadow-floating border border-gold border-opacity-30">
               <h3 className="text-xl font-display font-bold text-onyx mb-6">
                 Unlike fragmented setups, our integrated model gives clients:
@@ -119,6 +120,7 @@ const About = () => {
                 ))}
               </div>
             </div>
+            */}
           </div>
         </div>
       </div>
