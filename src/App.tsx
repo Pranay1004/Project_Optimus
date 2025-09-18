@@ -7,7 +7,7 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import WhatsAppFloat from './components/WhatsAppFloat';
+import WhatsAppFloat from './components/WhatsappFloat';
 
 function App() {
 
