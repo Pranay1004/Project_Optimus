@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle, Crown } from 'lucide-react';
 
 const Navigation = () => {
@@ -18,6 +18,7 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     /*{ name: 'Projects', href: '#projects' },*/
+    { name: 'Flyer', href: '/flyer/index.html' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -56,6 +57,8 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   className="text-onyx hover:text-saffron px-4 py-2 rounded-lg text-sm font-accent font-medium transition-all duration-300 relative group hover:bg-glass-white hover:backdrop-blur-glass"
+                  target={item.name === 'Flyer' ? '_blank' : undefined}
+                  rel={item.name === 'Flyer' ? 'noopener noreferrer' : undefined}
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-premium-gradient group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span>
@@ -104,6 +107,8 @@ const Navigation = () => {
                   href={item.href}
                   className="text-onyx hover:text-saffron block px-4 py-3 rounded-xl text-base font-accent font-medium transition-all duration-300 hover:bg-silk-white hover:bg-opacity-50"
                   onClick={() => setIsMenuOpen(false)}
+                  target={item.name === 'Flyer' ? '_blank' : undefined}
+                  rel={item.name === 'Flyer' ? 'noopener noreferrer' : undefined}
                 >
                   {item.name}
                 </a>
