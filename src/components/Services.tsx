@@ -1,5 +1,7 @@
 import React from 'react';
 import { Droplets, Paintbrush, Layers, Zap, Wrench, Home, Sofa, RefreshCw, Users, ArrowRight, MessageCircle, HardHat, Building2, CheckCircle } from 'lucide-react';
+import paintingIcon from '../assets/icons/painting.png';
+import tilingFlooringIcon from '../assets/icons/tiling-flooring.png';
 
 const Services = () => {
   const services = [
@@ -9,12 +11,12 @@ const Services = () => {
       description: 'Complete waterproofing solutions for roofs, walls, and basements.',
     },
     {
-      icon: '🎨',
+      icon: paintingIcon,
       title: 'Painting',
       description: 'Interior and exterior painting with premium quality finishes.',
     },
     {
-      icon: '🏗️',
+      icon: tilingFlooringIcon,
       title: 'Tiling & Flooring',
       description: 'Professional tiling, marble, and flooring installation services.',
     },
@@ -87,8 +89,12 @@ const Services = () => {
               >
                 {/* Icon Container */}
                 <div className="relative mb-4">
-                  <div className="bg-saffron p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                    <span className="text-2xl">{service.icon}</span>
+                  <div className="bg-orange-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    {typeof service.icon === 'string' && service.icon.startsWith('/') ? (
+                      <img src={service.icon} alt={service.title} className="w-6 h-6 object-contain" />
+                    ) : (
+                      <span className="text-2xl">{service.icon}</span>
+                    )}
                   </div>
                 </div>
 
