@@ -1,0 +1,246 @@
+/* Business Card Back Side - Premium Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.business-card-back {
+  /* Standard business card dimensions: 3.5" x 2" */
+  width: 350px;
+  height: 200px;
+  background: linear-gradient(135deg, 
+    #2C3E50 0%, 
+    #34495E 25%,
+    #3A4F6B 50%, 
+    #2C3E50 75%,
+    #1A252F 100%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(44, 62, 80, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.2);
+  
+  /* Subtle pattern overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 80% 20%, rgba(255, 149, 0, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%),
+      linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.02) 50%, transparent 60%);
+    pointer-events: none;
+  }
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 11px;
+  font-weight: 600;
+  color: #FF9500;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.experience-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF9500, #FFD700);
+  color: #2C3E50;
+  font-size: 8px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(255, 149, 0, 0.3);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.service-category h3 {
+  font-size: 8px;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.service-category ul {
+  list-style: none;
+}
+
+.service-category li {
+  font-size: 6px;
+  color: #BDC3C7;
+  margin-bottom: 1px;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 6px;
+}
+
+.service-category li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FF9500;
+  font-size: 5px;
+  font-weight: bold;
+}
+
+/* USP Section */
+.usp-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 149, 0, 0.1);
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.usp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.usp-icon {
+  font-size: 10px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.usp-item span {
+  font-size: 6px;
+  font-weight: 600;
+  color: #FFD700;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Details */
+.contact-details {
+  margin-bottom: 6px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+}
+
+.contact-icon {
+  font-size: 8px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.contact-info {
+  font-size: 7px;
+  font-weight: 500;
+  color: #BDC3C7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Section */
+.footer-section {
+  border-top: 1px solid rgba(255, 149, 0, 0.2);
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.motto {
+  font-size: 6px;
+  font-weight: 500;
+  color: #FF9500;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.social-links span {
+  font-size: 6px;
+  color: #BDC3C7;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2px;
+}
+
+.social-icon {
+  font-size: 7px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Premium hover effects */
+.business-card-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 15px 40px rgba(44, 62, 80, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Print optimization */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .business-card-back {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}

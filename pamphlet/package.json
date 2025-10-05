@@ -1,0 +1,11 @@
+{
+  "name": "pamphlet-tools",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render": "node render-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^20.0.0"
+  }
+}
