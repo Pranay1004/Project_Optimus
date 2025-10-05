@@ -9,9 +9,10 @@ body {
     background: #f1f5f9;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling for small screens */
 }
 
 @media print {
@@ -28,16 +29,31 @@ body {
     }
 }
 
+/* Ensure consistent sizing across all devices */
+@media screen and (max-width: 210mm) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+    
+    .flyer {
+        transform: none; /* Don't scale down, let it scroll horizontally */
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
 .flyer {
-    width: 100%;
-    max-width: 210mm;
-    /* allow height to size naturally on screen to avoid forcing space above footer */
+    width: 210mm;
+    /* Fixed width to maintain desktop view */
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    /* Force desktop aspect ratio */
+    transform-origin: top left;
 }
 /* Header Section */
 .header {
@@ -163,19 +179,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-@media (max-width: 700px) {
-    .main-content {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-    }
-    
-    .left-column, .right-column {
-        flex: 1;
-        width: 100%;
-    }
 }
 
 .section-title {
@@ -559,105 +562,10 @@ body {
     }
 }
 
-/* Comprehensive Mobile Responsive Design */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 0;
-    }
-    
+/* Add consistent styling guidance for all screen sizes */
+@media screen {
+    /* These styles apply to all screen sizes, maintaining the desktop view */
     .flyer {
-        box-shadow: none;
-        width: 100%;
-    }
-    
-    .header {
-        padding: 15px 20px;
-    }
-    
-    .logo {
-        font-size: 22px;
-    }
-    
-    .tagline {
-        font-size: 8px;
-    }
-    
-    .main-headline {
-        font-size: 22px;
-    }
-    
-    .subheadline {
-        font-size: 14px;
-    }
-    
-    .main-content {
-        padding: 15px;
-        gap: 15px;
-    }
-    
-    .section-title {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-item {
-        padding: 8px;
-    }
-    
-    .service-text {
-        font-size: 12px;
-    }
-    
-    .testimonial {
-        padding: 12px;
-    }
-    
-    .testimonial-text {
-        font-size: 12px;
-    }
-    
-    .image-circle {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .usps-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer {
-        padding: 15px;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .footer-logo {
-        font-size: 20px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        justify-items: center;
-    }
-    
-    .qr-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .qr-section {
-        justify-self: center;
-    }
-    
-    .cta-button {
-        padding: 8px 16px;
-        font-size: 14px;
+        margin: 0 auto; /* Center the flyer */
     }
 }
