@@ -1,57 +1,55 @@
 import React from 'react';
-import { Droplets, Paintbrush, Layers, Zap, Wrench, Home, Sofa, RefreshCw, Users, ArrowRight, MessageCircle, HardHat, Building2, CheckCircle } from 'lucide-react';
-import paintingIcon from '../assets/icons/painting.png';
-import tilingFlooringIcon from '../assets/icons/tiling-flooring.png';
+import { Droplets, Paintbrush, Layers, Zap, Wrench, Home, Sofa, RefreshCw, Users, ArrowRight, Building2 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: '💧',
+      icon: <Droplets className="w-6 h-6 text-saffron" />,
       title: 'Waterproofing',
       description: 'Complete waterproofing solutions for roofs, walls, and basements.',
     },
     {
-      icon: paintingIcon,
+      icon: <Paintbrush className="w-6 h-6 text-saffron" />,
       title: 'Painting',
       description: 'Interior and exterior painting with premium quality finishes.',
     },
     {
-      icon: tilingFlooringIcon,
+      icon: <Layers className="w-6 h-6 text-saffron" />,
       title: 'Tiling & Flooring',
       description: 'Professional tiling, marble, and flooring installation services.',
     },
     {
-      icon: '⚡',
+      icon: <Zap className="w-6 h-6 text-saffron" />,
       title: 'Electrical Work',
       description: 'Complete electrical installations, repairs, and maintenance.',
     },
     {
-      icon: '🔧',
+      icon: <Wrench className="w-6 h-6 text-saffron" />,
       title: 'Plumbing Work',
       description: 'Professional plumbing installations, repairs, and upgrades.',
     },
     {
-      icon: '🏢',
+      icon: <Building2 className="w-6 h-6 text-saffron" />,
       title: 'Exterior Work',
       description: 'Facade work, external repairs, and building maintenance.',
     },
     {
-      icon: '🏠',
+      icon: <Home className="w-6 h-6 text-saffron" />,
       title: 'Interior Work',
       description: 'Complete interior design, renovation, and finishing work.',
     },
     {
-      icon: '🪑',
+      icon: <Sofa className="w-6 h-6 text-saffron" />,
       title: 'Furniture Work',
       description: 'Custom furniture design, installation, and repair services.',
     },
     {
-      icon: '🔄',
+      icon: <RefreshCw className="w-6 h-6 text-saffron" />,
       title: 'Renovation',
       description: 'Complete home and office renovation projects.',
     },
     {
-      icon: '👥',
+      icon: <Users className="w-6 h-6 text-saffron" />,
       title: 'Expert Consultancy',
       description: 'Professional consultation and project planning services.',
     }
@@ -90,11 +88,9 @@ const Services = () => {
                 {/* Icon Container */}
                 <div className="relative mb-4">
                   <div className="bg-orange-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                    {typeof service.icon === 'string' && service.icon.startsWith('/') ? (
-                      <img src={service.icon} alt={service.title} className="w-6 h-6 object-contain" />
-                    ) : (
-                      <span className="text-2xl">{service.icon}</span>
-                    )}
+                    <span className="text-2xl text-saffron flex items-center justify-center">
+                      {service.icon}
+                    </span>
                   </div>
                 </div>
 

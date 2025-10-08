@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Optimus Projects</title>
+  <desc id="desc">Rounded golden gradient badge with a white crown monogram.</desc>
+  <defs>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A00" />
+      <stop offset="50%" stop-color="#FFC400" />
+      <stop offset="100%" stop-color="#E6B3FF" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(0,0,0,0.25)" />
+    </filter>
+  </defs>
+  <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#badge)" filter="url(#glow)" />
+  <path d="M20 42h24a2 2 0 0 0 2-2V26l-6 4-6-9-6 9-6-4v14a2 2 0 0 0 2 2z" fill="#ffffff" opacity="0.95" />
+  <path d="M26 42c0-3.5 3-6 6-6s6 2.5 6 6" fill="none" stroke="#FF8A00" stroke-width="2" stroke-linecap="round" />
+</svg>
