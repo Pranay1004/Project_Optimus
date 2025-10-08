@@ -1,4 +1,3 @@
-import React from 'react';
 import { Quote, Building, Home, MessageCircle, CheckCircle, ThumbsUp } from 'lucide-react';
 
 const Testimonials = () => {
@@ -129,7 +128,11 @@ const Testimonials = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           {[
             { number: '98%', label: 'Client Satisfaction', icon: ThumbsUp },
-            { number: '500+', label: 'Happy Clients', icon: Building },
+            {
+              number: '60+',
+              label: 'Satisfied Clients · Commercial · Private · Residential',
+              icon: Building
+            },
             { number: '100%', label: 'Projects Completed', icon: Home },
             { number: '24/7', label: 'Support Available', icon: MessageCircle }
           ].map((stat, index) => {
