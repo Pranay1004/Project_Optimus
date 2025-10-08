@@ -1,5 +1,7 @@
 # OPTIMUS PROJECTS - Local Setup Instructions
 
+> **Deployment note:** The Vercel build now targets **Node.js 20**. Use `nvm use 20` (or your preferred version manager) before installing dependencies to avoid engine warnings and to match the production environment.
+
 ## Files to Create:
 
 ### 1. package.json
