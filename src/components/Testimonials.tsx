@@ -1,4 +1,4 @@
-import { Quote, Building, Home, MessageCircle, CheckCircle, ThumbsUp } from 'lucide-react';
+import { Quote, Building, Home, MessageCircle, CheckCircle } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
@@ -63,7 +63,7 @@ const Testimonials = () => {
           </h2>
           <div className="w-32 h-1 bg-premium-gradient mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-charcoal-noir max-w-3xl mx-auto font-body leading-relaxed">
-            Real feedback from satisfied clients who trusted us with their construction and renovation projects.
+            Real feedback from 60+ satisfied clients across private, public, residential, and commercial projects who trust us to deliver lasting results.
           </p>
         </div>
 
@@ -125,12 +125,11 @@ const Testimonials = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
           {[
-            { number: '98%', label: 'Client Satisfaction', icon: ThumbsUp },
             {
               number: '60+',
-              label: 'Satisfied Clients · Commercial · Private · Residential',
+              label: 'Satisfied Clients across\nPrivate | Public | Commercial | Residential',
               icon: Building
             },
             { number: '100%', label: 'Projects Completed', icon: Home },
@@ -143,7 +142,7 @@ const Testimonials = () => {
                   <IconComponent className="h-6 w-6 text-silk-white" />
                 </div>
                 <div className="text-3xl font-display font-bold text-saffron mb-2">{stat.number}</div>
-                <div className="text-charcoal-noir font-body text-sm">{stat.label}</div>
+                <div className="text-charcoal-noir font-body text-sm whitespace-pre-line">{stat.label}</div>
               </div>
             );
           })}
