@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+Host: https://optimusp.in
+
+Sitemap: https://optimusp.in/sitemap.xml

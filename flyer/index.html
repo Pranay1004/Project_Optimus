@@ -4,18 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimus Projects - Premium Construction Services</title>
+        <meta name="description" content="Optimus Projects flyer: construction, renovation, waterproofing, electrical and plumbing, painting, and finishing services in Mumbai and Navi Mumbai." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://optimusp.in/flyer/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Optimus Projects - Premium Construction Services" />
+        <meta property="og:description" content="From foundation to final finish, Optimus Projects delivers complete construction solutions." />
+        <meta property="og:url" content="https://optimusp.in/flyer/" />
+        <meta property="og:image" content="https://optimusp.in/flyer/project.png" />
+        <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "CreativeWork",
+                            "@id": "https://optimusp.in/flyer/#creativework",
+                            "name": "Optimus Projects Service Flyer",
+                            "url": "https://optimusp.in/flyer/",
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Optimus Projects"
+                            },
+                            "about": {
+                                "@id": "https://optimusp.in/flyer/#business"
+                            }
+                        },
+                        {
+                            "@type": "LocalBusiness",
+                            "@id": "https://optimusp.in/flyer/#business",
+                            "name": "Optimus Projects",
+                            "url": "https://optimusp.in/",
+                            "telephone": "+91-73030-15133",
+                            "email": "business@optimusp.in",
+                            "areaServed": [
+                                "Mumbai",
+                                "Navi Mumbai",
+                                "Panvel",
+                                "Thane",
+                                "Kalyan",
+                                "Mira Bhayandar",
+                                "Borivali",
+                                "Alibaug"
+                            ],
+                            "serviceType": [
+                                "Structural Work",
+                                "Waterproofing",
+                                "Interior and Exterior Design",
+                                "Electrical and Plumbing",
+                                "Painting and Finishing",
+                                "Tiling and Flooring",
+                                "Furniture Installation",
+                                "Complete Renovation"
+                            ]
+                        }
+                    ]
+                }
+        </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="flyer.css">
+    <style>
+        /* Enforce A4 paper dimensions for the flyer (portrait) */
+        .flyer{
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            margin: 12mm auto;
+            overflow: hidden;
+            background: #ffffff;
+            position: relative; /* allow absolute positioning in print */
+        }
+
+        /* Make it responsive in-browser: scale down on narrow screens but keep A4 ratio */
+        @media screen and (max-width: 1000px) {
+            .flyer{
+                width: calc(100vw - 24px);
+                height: auto;
+                margin: 12px auto;
+            }
+        }
+
+        /* Print specific rules */
+        @page { size: A4 portrait; margin: 0; }
+        @media print {
+            html, body { width: 210mm; height: 297mm; margin: 0; padding: 0; }
+            .flyer{ box-shadow: none; margin: 0; page-break-after: always; }
+        }
+
+        /* Optional visual centering on screen */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            /* Match the header area so printer/browser margins blend in visually */
+            background: linear-gradient(90deg,#0f2433 0%, #1b2e3b 100%);
+        }
+
+        /* Print preview button styling and hide on print */
+        #printPreviewBtn { display: inline-block; }
+        @media print { #printPreviewBtn { display: none !important; } }
+
+        /* Reduce white gap at top when printing by removing default body margins
+           and making the flyer start at the page edge. Note: many browsers/printers
+           still reserve a hardware margin; set "Margins: None" and enable
+           "Background graphics" in the print dialog for best results. */
+        @media print {
+            html, body { margin: 0; padding: 0; background: linear-gradient(90deg,#0f2433 0%, #1b2e3b 100%); }
+            /* Force the flyer to the page origin so it fills the A4 PDF exactly */
+            .flyer { margin: 0; width: 210mm; height: 297mm; position: absolute; left: 0; top: 0; }
+        }
+    </style>
 </head>
 <body>
+    <h1 style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Optimus Projects Construction Services Flyer</h1>
+    <button id="printPreviewBtn" style="position:fixed; top:12px; right:12px; z-index:9999; background:#ffb300; color:#0b0b0b; border:none; padding:10px 14px; border-radius:8px; font-weight:700; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.15);">Print Preview</button>
     <div class="flyer">
         <!-- Header Section -->
         <div class="header">
             <div class="logo-section">
                 <div>
-                    <div class="logo">
-                        OPTIMUS <span class="logo-accent">PROJECTS</span>
-                    </div>
+                    <div class="logo">OPTIMUS <span class="logo-accent">PROJECTS</span></div>
                     <div class="tagline">Transforming Spaces. Building Trust.</div>
                 </div>
             </div>
@@ -84,7 +192,7 @@
                         </div>
                         <div class="why-item">
                             <div class="check-icon">✓</div>
-                            <span>15+ Years of Excellence & Experience</span>
+                            <span>25+ Years of Excellence & Experience</span>
                         </div>
                         <div class="why-item">
                             <div class="check-icon">✓</div>
@@ -138,7 +246,7 @@
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">✉</div>
-                    <span>mukesh244@pm.me</span>
+                    <span>business@optimusp.in</span>
                 </div>
             </div>
 
@@ -161,5 +269,15 @@
             </div>
         </div>
     </div>
+    <script>
+        (function(){
+            var btn = document.getElementById('printPreviewBtn');
+            if(!btn) return;
+            btn.addEventListener('click', function(){
+                // Give the browser a moment to render any dynamic styles, then open print dialog
+                setTimeout(function(){ window.print(); }, 50);
+            });
+        })();
+    </script>
 </body>
 </html>
