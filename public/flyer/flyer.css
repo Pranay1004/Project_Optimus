@@ -9,56 +9,25 @@ body {
     background: #f1f5f9;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     padding: 20px;
-    overflow-x: auto; /* Allow horizontal scrolling for small screens */
-}
-
-@media print {
-    body {
-        background: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .flyer {
-        width: 210mm;
-        box-shadow: none;
-        margin: 0;
-    }
-}
-
-/* Ensure consistent sizing across all devices */
-@media screen and (max-width: 210mm) {
-    body {
-        padding: 0;
-        align-items: flex-start;
-    }
-    
-    .flyer {
-        transform: none; /* Don't scale down, let it scroll horizontally */
-        margin: 0;
-        border-radius: 0;
-    }
 }
 
 .flyer {
     width: 210mm;
-    /* Fixed width to maintain desktop view */
+    /* allow height to size naturally on screen to avoid forcing space above footer */
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* Force desktop aspect ratio */
-    transform-origin: top left;
 }
 /* Header Section */
 .header {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 25px 35px 20px;
+    padding: 40px 35px 35px;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
@@ -91,10 +60,11 @@ body {
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-size: 56px; /* increased size so OPTIMUS PROJECTS is larger */
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 2px;
+    white-space: nowrap; /* keep the two words on one line */
 }
 
 .logo-accent {
@@ -102,6 +72,17 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Top-right logo image */
+.top-logo {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    width: 110px;
+    height: auto;
+    z-index: 3;
+    display: block;
 }
 
 .tagline {
@@ -114,11 +95,11 @@ body {
 
 .main-headline {
     font-family: 'Montserrat', sans-serif;
-    font-size: 34px;
+    font-size: 52px;
     font-weight: 800;
     color: #ffffff;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    line-height: 1.1;
+    margin-bottom: 12px;
     position: relative;
     z-index: 2;
 }
@@ -161,14 +142,13 @@ body {
 
 /* Main Content */
         .main-content {
-    display: flex;
-    padding: 25px 35px;
-    gap: 25px;
-    /* prevent the main content from growing to fill the flyer height so footer follows content */
-    flex: 0 0 auto;
-    overflow: hidden;
-    flex-direction: row;
-}
+            display: flex;
+            padding: 25px 35px;
+            gap: 25px;
+            /* prevent the main content from growing to fill the flyer height so footer follows content */
+            flex: 0 0 auto;
+            overflow: hidden;
+        }
 
 .left-column {
     flex: 6;
@@ -559,13 +539,5 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-}
-
-/* Add consistent styling guidance for all screen sizes */
-@media screen {
-    /* These styles apply to all screen sizes, maintaining the desktop view */
-    .flyer {
-        margin: 0 auto; /* Center the flyer */
     }
 }
