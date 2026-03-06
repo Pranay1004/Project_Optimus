@@ -12,7 +12,7 @@
     "vercel:status": "node scripts/check-vercel-status.cjs"
   },
   "dependencies": {
-    "@typeform/embed-react": "^2.2.0",
+    "@typeform/embed-react": "^5.0.0",
     "@types/react-router-dom": "^5.3.3",
     "@uploadcare/react-uploader": "^1.13.0",
     "@vercel/analytics": "^1.6.1",
