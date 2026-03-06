@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deps:outdated": "npm outdated",
+    "vercel:status": "node scripts/check-vercel-status.cjs"
   },
   "dependencies": {
     "@typeform/embed-react": "^2.2.0",
@@ -25,6 +27,7 @@
     "node": "20.x"
   },
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^5.0.4",
@@ -32,9 +35,11 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "globals": "^16.4.0",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",
+    "typescript-eslint": "^8.46.1",
     "vite": "^5.4.8"
   }
 }
