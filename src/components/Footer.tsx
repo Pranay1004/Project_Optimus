@@ -67,7 +67,7 @@ const Footer = () => {
                 <div className="bg-gold p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <Mail className="h-5 w-5 text-silk-white" />
                 </div>
-                <span className="font-body text-silver group-hover:text-gold transition-colors duration-300">mukesh244@pm.me</span>
+                <span className="font-body text-silver group-hover:text-gold transition-colors duration-300">business@optimusp.in</span>
               </div>
             </div>
           </div>

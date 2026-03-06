@@ -58,7 +58,7 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/mukesh244@pm.me', {
+      const response = await fetch('https://formsubmit.co/ajax/business@optimusp.in', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <h3 className="font-display font-bold text-gray-800 text-xl">Email</h3>
-                      <p className="text-gray-700 text-lg">mukesh244@pm.me</p>
+                      <p className="text-gray-700 text-lg">business@optimusp.in</p>
                     </div>
                   </div>
                 </div>

@@ -16,6 +16,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "lucide-react": "^0.233.0",
+    "puppeteer": "^24.34.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.7.0"
