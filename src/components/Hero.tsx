@@ -15,16 +15,16 @@ const Hero = () => {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="space-y-10">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-onyx leading-tight tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-onyx leading-tight tracking-tight">
                 We Build, We Transform,
                 <span className="block text-saffron">
                   We Deliver
                 </span>
               </h1>
-              <div className="text-2xl md:text-3xl font-accent font-semibold text-saffron mb-6">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-accent font-semibold text-saffron mb-6">
                 From Foundations to Finishes
               </div>
-              <p className="text-xl text-charcoal-noir leading-relaxed font-body mx-auto max-w-2xl">
+              <p className="text-base md:text-lg lg:text-xl text-charcoal-noir leading-relaxed font-body mx-auto max-w-2xl">
                 OPTIMUS PROJECTS delivers construction and renovation solutions. 
                 You bring the vision, we bring the excellence.
               </p>
