@@ -1,7 +1,41 @@
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /llms.txt
 Crawl-delay: 1
 
+# Specific guidance for AI bot user agents
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 0
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 0
+
+User-agent: Perplexity
+Allow: /
+Crawl-delay: 0
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Preferred host
 Host: https://optimusp.in
 
+# Sitemap locations
 Sitemap: https://optimusp.in/sitemap.xml
+Sitemap: https://optimusp.in/llms.txt
