@@ -15,6 +15,13 @@ const path = require('path');
     const fileUrl = 'file://' + path.resolve(__dirname, '..', 'flyer', 'index.html');
     await page.goto(fileUrl, { waitUntil: 'networkidle0' });
 
+    // The print-preview button is screen-only UI; it is already hidden by
+    // @media print, so hide it before rasterising the PNG too.
+    await page.evaluate(() => {
+      const btn = document.getElementById('printPreviewBtn');
+      if (btn) btn.style.display = 'none';
+    });
+
     // Ensure any dynamic fonts/styles are applied
     await new Promise(r => setTimeout(r, 200));
 
@@ -52,6 +59,19 @@ const path = require('path');
 
     console.log('Generated:', pdfPath);
     console.log('Generated:', pngPath);
+
+    // Root preview image, letterboxed to the 1200x1680 canvas used by the
+    // committed flyer-screenshot.png / flyer-header-fixed-latest.png.
+    const prevW = 1200;
+    const prevH = 1680;
+    const previewPath = path.resolve(__dirname, '..', 'flyer-header-fixed-latest.png');
+    await page.setViewport({ width: prevW, height: prevH, deviceScaleFactor: 1 });
+    await new Promise(r => setTimeout(r, 200));
+    await page.screenshot({
+      path: previewPath,
+      omitBackground: false,
+    });
+    console.log('Generated:', previewPath);
   } catch (err) {
     console.error('Error generating flyer:', err);
     process.exitCode = 2;
