@@ -22,15 +22,33 @@ const path = require('path');
     const pdfPath = path.resolve(__dirname, '..', 'flyer', 'flyer.pdf');
     await page.pdf({ path: pdfPath, format: 'A4', printBackground: true, margin: { top: '0mm', right: '0mm', bottom: '0mm', left: '0mm' } });
 
-    // Capture PNG of the `.flyer` element using element.screenshot() (more reliable)
-    const flyerHandle = await page.$('.flyer');
+    // Capture PNG of the `.flyer` element.
+    // Note: both handle.screenshot() and page.screenshot() with
+    // captureBeyondViewport: true hang indefinitely on this page, so grow the
+    // viewport to contain the element and clip within it instead.
+    const rect = await page.evaluate(() => {
+      const r = document.querySelector('.flyer').getBoundingClientRect();
+      return { x: r.x, y: r.y, width: r.width, height: r.height };
+    });
+
+    await page.setViewport({
+      width: widthPx,
+      height: Math.ceil(rect.y + rect.height) + 4,
+      deviceScaleFactor: 1,
+    });
+    await new Promise(r => setTimeout(r, 200));
+
     const pngPath = path.resolve(__dirname, '..', 'flyer', 'flyer.png');
-    if (flyerHandle) {
-      await flyerHandle.screenshot({ path: pngPath, omitBackground: false });
-    } else {
-      // fallback to full page screenshot
-      await page.screenshot({ path: pngPath, fullPage: true });
-    }
+    await page.screenshot({
+      path: pngPath,
+      clip: {
+        x: Math.round(rect.x),
+        y: Math.round(rect.y),
+        width: Math.round(rect.width),
+        height: Math.round(rect.height),
+      },
+      omitBackground: false,
+    });
 
     console.log('Generated:', pdfPath);
     console.log('Generated:', pngPath);

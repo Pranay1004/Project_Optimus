@@ -11,6 +11,7 @@
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
     "seo:validate": "node scripts/validate-seo.cjs",
+    "flyer": "node scripts/generate_flyer.cjs",
     "validate": "npm run lint && npm run typecheck && npm run build && npm run seo:validate",
     "deps:outdated": "npm outdated",
     "vercel:status": "node scripts/check-vercel-status.cjs"
